@@ -1,0 +1,55 @@
+<div id="page-wrapper" class="sign-in-wrapper">
+        <div class="graphs">
+        <form name="userForm">
+          <div class="sign-in-form">
+            <div class="signin">
+            <div class="signin-rit">
+                <div class="clearfix"> </div>
+              </div>
+              <div class="log-input">
+                <div class="log-input-left" style="border-bottom: solid 1px #Ccc">
+                   <h4>Admin Login</h4>
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+              <div class="row">
+              <div class="col-sm-12">
+                <div class="alert alert-{{class}}" style="padding: 5px;width: 88%;font-size: 11px;margin:5px 0px 5px 0px; ;" ng-show="show">{{message}}</div>
+              </div>
+              </div>
+              <div class="log-input">
+                <div class="log-input-left">
+                   <input type="text" class="user"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address:';}" ng-model="user.email_address" placeholder="Email Address" required="" name="email_address" />
+                </div>
+                <span class="checkbox2 has-error">
+                <div class="help-block" ng-messages="userForm.email_address.$error" ng-if="userForm.email_address.$touched">
+                <p ng-message="required"><b>X</b></p>
+                </div>
+                </span>
+                <div class="clearfix"> </div>
+              </div>
+              <div class="log-input">
+                <div class="log-input-left">
+                   <input type="password" class="lock" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password:';}" ng-model="user.password" placeholder="password" required="" />
+                </div>
+                <span class="checkbox2 has-error">
+                <div class="help-block" ng-messages="userForm.password.$error" ng-if="userForm.password.$touched">
+                <p ng-message="required"><b>X</b></p>
+                </div>
+                </span>
+                <div class="clearfix"> </div>
+              </div>
+              <input type="submit" value="Login" id="loginBtn">
+              <div class="signin-rit">
+                <span class="checkbox1">
+                   <label class="checkbox"><a href="#/forgotpassword">Forgot Password ?</a></label>
+                </span>
+                
+                <div class="clearfix"> </div>
+              </div>
+            </div>
+            </form>
+          </div>
+
+        </div>
+      </div>

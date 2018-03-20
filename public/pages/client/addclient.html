@@ -1,0 +1,143 @@
+<div id="page-wrapper">
+<div role="alert" class="alert alert-{{class}}">
+  <strong></strong>
+</div>
+<div class="panel-body panel-body-inputin">
+<div class="panel-heading">
+<h4>Add New Client</h4>
+<div class="panel-ctrls" data-actions-container="" data-action-collapse="{&quot;target&quot;: &quot;.panel-body&quot;}"><span class="button-icon has-bg"><i class="ti ti-angle-down"></i></span></div>
+</div>
+<form role="form" class="form-horizontal">
+    <div class="form-group">
+    <label class="col-md-2 control-label">Supplier Name</label>
+    <div class="col-md-8">
+      <div class="input-group in-grp1">   
+        {{supplier_name}}
+        <input type="hidden" class="form-control1"    id="id" name="id" ng-model="client.id" value="0">
+        <input type="hidden" class="form-control1"  id="supplier_id" name="supplier_id" ng-model="client.supplier_id" disabled="disabled" value="">
+        <input type="hidden" class="form-control1"  id="vendor_id" name="vendor_id" ng-model="client.vendor_id" disabled="disabled" value="">
+      </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-2 control-label">First Name</label>
+    <div class="col-md-8">
+      <div class="input-group in-grp1">
+        <input type="text" class="form-control1" id="first_name" name="first_name" placeholder="first name" ng-model="client.first_name">
+      </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-2 control-label">Last Name</label>
+    <div class="col-md-8">
+      <div class="input-group in-grp1">
+        <input type="text" class="form-control1" id="last_name" name="last_name" placeholder="last name" ng-model="client.last_name">
+      </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">Mobile Number</label>
+    <div class="col-md-8">
+      <div class="input-group input-icon right in-grp1">
+        <span class="input-group-addon">
+          <i class="fa fa-phone"></i>
+        </span>
+        <input type="text" class="form-control1" placeholder="Mobile Number" id="mobile" ng-model="client.mobile" maxlength="10">
+      </div>
+    </div>
+    <div class="col-sm-2 jlkdfj1">
+      <p class="help-block"></p>
+    </div>
+    <div class="clearfix"> </div>
+
+  </div>
+  
+  <div class="form-group">
+    <label class="col-md-2 control-label">Email Address</label>
+    <div class="col-md-8">
+      <div class="input-group input-icon right in-grp1">
+        <span class="input-group-addon">
+          <i class="fa fa-envelope-o"></i>
+        </span>
+        <input id="email_address" class="form-control1" type="text" placeholder="Email Address" name="email_address" ng-model="client.email_address">
+      </div>
+    </div>
+    <div class="col-sm-2 jlkdfj1">
+      <p class="help-block"></p>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-2 control-label">Password</label>
+    <div class="col-md-8">
+      <div class="input-group input-icon right in-grp1">
+        <input id="password" class="form-control1" type="text" placeholder="password" name="password" ng-model="client.password">
+      </div>
+    </div>
+    <div class="col-sm-2 jlkdfj1">
+      <p class="help-block"></p>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-2 control-label">Confirm Password</label>
+    <div class="col-md-8">
+      <div class="input-group input-icon right in-grp1">
+        <input id="password" class="form-control1" type="text" placeholder="cpassword" name="cpassword" ng-model="client.cpassword">
+      </div>
+    </div>
+    <div class="col-sm-2 jlkdfj1">
+      <p class="help-block"></p>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+
+
+  <div class="form-group">
+    <label class="col-md-2 control-label">address</label>
+    <div class="col-md-8">
+      <div class="input-group in-grp1">
+        <input type="text" class="form-control1" id="address" name="address" placeholder="address" ng-model="client.address">
+      </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">Landmark</label>
+    <div class="col-md-8">
+      <div class="input-group in-grp1">
+        <input type="text" class="form-control1" id="landmark" name="landmark" placeholder="landmark" ng-model="client.landmark">
+      </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">Pincode</label>
+    <div class="col-md-8">
+      <div class="input-group in-grp1">
+        <input type="text" class="form-control1" id="pincode" name="pincode" placeholder="pincode" ng-model="client.pincode">
+      </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+
+  
+  
+  <div class="panel-footer">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <button class="btn-success btn" id="sbtn">Submit</button>
+      <button class="btn-success btn" id="ecntBtn">Cancel</button>
+    </div>
+  </div>
+  </div>
+</form>
+</div>
+</div>

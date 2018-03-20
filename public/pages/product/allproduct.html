@@ -1,0 +1,66 @@
+<div id="page-wrapper">
+  <div class="graphs">
+      <div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+        <div class="panel-heading">
+          <h2>All Products</h2>
+          <div class="panel-ctrls" data-actions-container="" data-action-collapse="{&quot;target&quot;: &quot;.panel-body&quot;}"><span class="button-icon has-bg"><a href="#/addproduct/{{PKCompanyRefNo}}"> <i class="fa fa-plus-square-o icon_9"></i>Add New Product</a></span></div>
+        </div>
+        <div class="table table-responsive" style="display: block;">
+          <table class="table">
+            <thead>
+              <tr class="success">
+                <th>#</th>
+                <th>Vendor Name</th>
+                <th>Category Name</th>
+                <th>Title</th>
+                <th>SKU</th>
+                <th>Capacity</th>
+                <th>Price</th>
+                <th>Created Date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="item in itemlist | orderBy:'-id'">
+                <td>{{item.id}}</td>
+                <td>{{item.vendorName}}</td>
+                <td>{{item.categoryName}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.product_sku}}</td>
+                <td>{{item.capacity}}&nbsp;{{item.unitTitle}}</td>
+                <td>&#x20B9;{{item.price}}</td>
+                <td>{{item.createdDate}}</td>
+                <td ng-if="item.status==1"><span class="active">Active</span></td>
+                <td ng-if="item.status==0"><span class="inactive">InActive</span></td>
+                <td><div class="btn-group m-r-sm mail-hidden-options" style="display: inline-block;">
+                  <div class="btn-group">
+                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class=" fa fa-cog icon_8"></i> <span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                      <li><a href="#/viewprofile/:id={{item.id}}"><i class="fa fa-user"></i>  Details</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#/editproduct/{{item.PKCompanyRefNo}}/{{item.id}}"> <i class="fa fa-pencil-square-o icon_9"></i>Edit Product</a></li>
+                      <li><a href="javascript:void(0)" class="deleteProduct" id="deleteProduct_{{item.PKCompanyRefNo}}_{{item.id}}"> <i class="fa fa-pencil-square-o icon_9"></i>Delete Product</a></li>
+                      <li><a href="#"></li>
+                    </ul>
+                  </div>
+                </div>
+                </td>
+              </tr>
+              <tr ng-show="showVal">
+                <td colspan="9">
+                  <div role="alert" class="alert alert-{{class}}">
+                    <strong>{{message}}</strong>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      
+      </div>
+    </div>
+  </div>
+</div>

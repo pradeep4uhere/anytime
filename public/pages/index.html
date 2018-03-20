@@ -1,0 +1,56 @@
+<div id="page-wrapper" class="sign-in-wrapper">
+        <div class="graphs">
+          <div class="sign-in-form">
+            <div class="signin">
+            <div class="signin-rit">
+                <div class="clearfix"> </div>
+              </div>
+              <div class="log-input">
+                <div class="log-input-left" style="border-bottom: solid 1px #Ccc">
+                   <h4>User Login</h4>
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+              <div class="row">
+              <div class="log-input">
+              <div class="col-sm-12">
+                <div class="alert alert-{{class}}" ng-show="{{show}}">{{message}}</div>
+              </div>
+              </div>
+              </div>
+
+              <div class="row">
+              <div class="log-input">
+              <div class="col-sm-12">
+                <label><b>User Type</b>&nbsp;&nbsp;&nbsp;</label>
+                <div class="radio-inline"><label><input type="radio" name="usertype" value="3" ng-model="user.userType" checked="checked"> Retail</label></div>
+                <div class="radio-inline"><label><input type="radio" name="usertype" value="1" ng-model="user.userType"> Vendor</label></div>
+                <div class="radio-inline"><label><input type="radio" name="usertype" value="2" ng-model="user.userType"> Supllier</label></div>
+              </div>
+              </div>
+              </div>
+              <div class="log-input">
+                <div class="log-input-left">
+                   <input type="text" class="user" value="Yourname" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address:';}" ng-model="user.email_address" placeholder="Email Address" />
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+              <div class="log-input">
+                <div class="log-input-left">
+                   <input type="password" class="lock" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password:';}" ng-model="user.password" placeholder="password" />
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+              <input type="submit" value="Login" id="loginBtn">
+              <div class="signin-rit">
+                <span class="checkbox1">
+                   <label class="checkbox"><a href="#/forgotpassword">Forgot Password ?</a></label>
+                </span>
+                <p><a href="https://prssystem.000webhostapp.com/#/register">Register</a> </p>
+                <div class="clearfix"> </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>

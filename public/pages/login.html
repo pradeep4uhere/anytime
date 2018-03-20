@@ -1,0 +1,59 @@
+<div id="page-wrapper" class="sign-in-wrapper">
+        <div class="graphs">
+          <div class="sign-in-form">
+            <div class="signin">
+            <div class="signin-rit">
+                <div class="clearfix"> </div>
+              </div>
+              <div class="log-input">
+                <div class="log-input-left" style="border-bottom: solid 1px #Ccc">
+                   <h4>User Login</h4>
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+              <div class="row">
+              <div class="log-input">
+              <div class="col-sm-12">
+                <div class="alert alert-{{class}}" ng-show="{{show}}">{{message}}</div>
+              </div>
+              </div>
+              </div>
+
+              <div class="log-input">
+                <div class="log-input-left">
+                   <select class="form-control" ng-model="user.userType">
+                    <option value="">Select User Type</option>
+                    <option value="2">User</option>
+                    <option value="1">Vendor</option>
+                </select>
+                </div>
+                <div class="clearfix"> </div></br>
+              </div>
+
+
+              <div class="log-input">
+                <div class="log-input-left">
+                   <input type="text" class="user" value="Yourname" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address:';}" ng-model="user.email_address" placeholder="Mobile" />
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+              <div class="log-input">
+                <div class="log-input-left">
+                   <input type="password" class="lock" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password:';}" ng-model="user.password" placeholder="password" />
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+             
+              <input type="submit" value="Login" id="loginBtn">
+              <div class="signin-rit">
+                <span class="checkbox1">
+                   <label class="checkbox"><a href="#/forgotpassword">Forgot Password ?</a></label>
+                </span>
+                <p><a href="register.php">Register</a> </p>
+                <div class="clearfix"> </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>

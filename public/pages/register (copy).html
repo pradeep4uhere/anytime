@@ -1,0 +1,172 @@
+<div id="page-wrapper" class="sign-in-wrapper">
+  <center><h4>New User Register</h4></center>
+  <form  class="form-horizontal" name="userForm" >
+      <div class="form-group">
+        <label class="col-md-2 control-label">First Name*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">             
+            <input type="text" class="form-control1" placeholder="first Name" name="firstname" ng-model="user.fname" required="" id="firstname">
+            <p ng-show="userForm.user.$error.required">First Name is required</p>
+          </div>
+        </div>
+
+
+        <div class="col-sm-2 jlkdfj1 has-error ">
+          <div class="help-block" ng-messages="userForm.firstname.$error" ng-if="userForm.firstname.$touched">
+            <p ng-message="required">First name is required.</p>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label">Last Name*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">
+            <input type="text" class="form-control1" id="lastname" name="lastname" placeholder="Last Name" ng-model="user.lname" required="">
+          </div>
+        </div>
+        <div class="col-sm-2 jlkdfj1 has-error ">
+          <div class="help-block" ng-messages="userForm.lastname.$error" ng-if="userForm.lastname.$touched">
+            <p ng-message="required">Last name is required.</p>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-2 control-label">Company Name*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">
+            <input type="text" class="form-control1"  name="compname" id="compname" placeholder="Company Name" ng-model="user.compname" required="">
+          </div>
+        </div>
+        <div class="col-sm-2 jlkdfj1 has-error ">
+          <div class="help-block" ng-messages="userForm.compname.$error" ng-if="userForm.compname.$touched">
+            <p ng-message="required">Company name is required.</p>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-2 control-label">Address*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">
+            <input type="text" class="form-control1"  name="address" id="address" placeholder="Address" ng-model="user.address" required="required">
+          </div>
+        </div>
+        <div class="col-sm-2 jlkdfj1 has-error ">
+          <div class="help-block" ng-messages="userForm.address.$error" ng-if="userForm.address.$touched">
+            <p ng-message="required">Address is required.</p>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label">Pincode*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">
+            <input type="text" class="form-control1" id="Pincode" name="Pincode" placeholder="Pincode" ng-model="user.pincode" required="required">
+          </div>
+        </div>
+        <div class="col-sm-2 jlkdfj1 has-error ">
+          <div class="help-block" ng-messages="userForm.Pincode.$error" ng-if="userForm.Pincode.$touched">
+            <p ng-message="required">Pincode is required.</p>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-2 control-label">Email Address*</label>
+        <div class="col-md-8">
+          <div class="input-group input-icon right in-grp1">
+            <span class="input-group-addon">
+              <i class="fa fa-envelope-o"></i>
+            </span>
+            <input id="emailaddress" class="form-control1" type="email" placeholder="Email Address" name="emailaddress" ng-model="user.emailaddress" required="required">
+          </div>
+        </div>
+        <div class="col-sm-2 jlkdfj1 has-error ">
+          <div class="help-block" ng-messages="userForm.emailaddress.$error" ng-if="userForm.emailaddress.$touched">
+              <p ng-message="required">Email is required.</p>
+              <p ng-message="email">Enter valid email address.</p>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label">Phone Number*</label>
+        <div class="col-md-8">
+          <div class="input-group input-icon right in-grp1">
+            <span class="input-group-addon">
+              <i class="fa fa-phone"></i>
+            </span>
+            <input type="text" class="form-control1" placeholder="Phone Number" name="phonenumber" ng-model="user.mobile_number" maxlength="10" minlength="10" required="required">
+          </div>
+        </div>
+        <div class="col-sm-2 jlkdfj1 has-error">
+          <div class="help-block" ng-messages="userForm.phonenumber.$error" ng-if="userForm.phonenumber.$touched">
+            <p ng-message="required">Mobile is required.</p>
+            <p ng-message="minlength">Enter valid mobile number.</p>
+            <p ng-message="maxlength">Enter valid mobile number.</p>
+          </div>
+        </div>
+        <div class="col-sm-2 jlkdfj1">
+          <p class="help-block"></p>
+        </div>
+        <div class="clearfix"> </div>
+
+      </div>
+
+
+      
+
+
+
+      <div class="form-group">
+        <label class="col-md-2 control-label">Password*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">             
+            <input type="password" class="form-control1" placeholder="password" name="password" minlength="6" required="" ng-model="user.password" >
+          </div>
+        </div>
+        <div class="col-sm-2 jlkdfj1 has-error">
+          <div class="help-block" ng-messages="userForm.password.$error" ng-if="userForm.password.$touched">
+            <p ng-message="required">Password is required.</p>
+            <p ng-message="minlength">Password should be minimum 6 char.</p>
+            
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+
+      <div class="form-group" ng-class="{'has-error':!userForm.confirmPassword.$valid}">
+        <label class="col-md-2 control-label">Confirm Password*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">             
+            <input type="password" class="form-control1" placeholder="confirm password" id="confirmPassword" name="confirmPassword" ng-model="user.confirmPassword" required="required" minlength="6" ng-match="user.confirmPassword" not-match="true">
+          </div>
+        </div>
+        <div class="col-sm-2 jlkdfj1 has-error">
+          <div class="help-block" ng-messages="userForm.confirmPassword.$error" ng-if="userForm.confirmPassword.$touched">
+            <p ng-message="required">Confirm password is required.</p>
+            <p ng-show="userForm.confirmPassword.$error.minlength">Confirm should be minimum 6 char.</p>
+            <p ng-show="userForm.confirmPassword.$error.match">Confirm password did not matched.</p>
+            
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <div class="panel-footer">
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-6">
+          <button class="btn-success btn" id="sbtn">Submit</button>
+          <button class="btn-success btn" id="loginPage">Cancel</button>
+        </div>
+      </div>
+      </div>
+    </form>
+    </div>

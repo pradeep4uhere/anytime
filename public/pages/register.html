@@ -1,0 +1,150 @@
+<div id="page-wrapper" class="sign-in-wrapper">
+  <center><h2>New User Register</h2></center>
+  <form  class="form-horizontal" name="userForm" >
+       <div class="form-group">
+         <label class="col-md-2 control-label">I am *</label>
+                 <div class="col-md-8">
+                   <div class="input-group in-grp1">  
+                     <select class="form-control" ng-model="user.userType" id="userType" name="userType" ng-change="hideSellerField()">
+                      <option value="" selected="">Select User Type</option>
+                      <option value="2">Buyer</option>
+                      <option value="1">Seller</option>
+                  </select>
+                  </div>
+                   </div>
+                  <div class="clearfix"> </div></br>
+                </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label">First Name*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">             
+            <input type="text" class="form-control1" placeholder="first Name" name="firstname" ng-model="user.fname" required="" id="firstname">
+            <!-- <p ng-show="userForm.user.$error.required">First Name is required</p> -->
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label">Last Name*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">
+            <input type="text" class="form-control1" id="lastname" name="lastname" placeholder="Last Name" ng-model="user.lname" required="">
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <div class="form-group" class="sellerType">
+        <label class="col-md-2 control-label">Company Name*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">
+            <input type="text" class="form-control1"  name="compname" id="compname" placeholder="Company Name" ng-model="user.compname" required="">
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-2 control-label">Address*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">
+            <input type="text" class="form-control1"  name="address" id="address" placeholder="Address" ng-model="user.address" required="required">
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label">Landmark*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">
+            <input type="text" class="form-control1"  name="locality" id="locality" placeholder="Landmark" ng-model="user.locality" required="required">
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label">Pincode*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">
+            <input type="text" class="form-control1" id="Pincode" name="Pincode" placeholder="Pincode" ng-model="user.pincode" required="required">
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-2 control-label">Email Address*</label>
+        <div class="col-md-8">
+          <div class="input-group input-icon right in-grp1">
+            <span class="input-group-addon">
+              <i class="fa fa-envelope-o"></i>
+            </span>
+            <input id="emailaddress" class="form-control1" type="email" placeholder="Email Address" name="emailaddress" ng-model="user.emailaddress" required="required">
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label">Phone Number*</label>
+        <div class="col-md-8">
+          <div class="input-group input-icon right in-grp1">
+            <span class="input-group-addon">
+              <i class="fa fa-phone"></i>
+            </span>
+            <input type="text" class="form-control1" placeholder="Phone Number" id="phonenumber" name="phonenumber" ng-model="user.mobile_number" maxlength="10" minlength="10" required="required">
+          </div>
+        </div>
+        <div class="col-sm-2 jlkdfj1">
+          <p class="help-block"></p>
+        </div>
+        <div class="clearfix"> </div>
+
+      </div>
+
+
+      
+
+
+
+      <div class="form-group">
+        <label class="col-md-2 control-label">Password*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">             
+            <input type="password" class="form-control1" placeholder="password" name="password" minlength="6" required="" id="password" ng-model="user.password" >
+          </div>
+        </div>
+
+        <div class="clearfix"> </div>
+      </div>
+
+
+      <div class="form-group" ng-class="{'has-error':!userForm.confirmPassword.$valid}">
+        <label class="col-md-2 control-label">Confirm Password*</label>
+        <div class="col-md-8">
+          <div class="input-group in-grp1">             
+            <input type="password" class="form-control1" placeholder="confirm password" id="confirmPassword" name="confirmPassword" ng-model="user.confirmPassword" required="required" minlength="6" ng-match="user.confirmPassword" not-match="true">
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+       <div class="form-group" ng-class="{'has-error':!userForm.confirmPassword.$valid}">
+        <label class="col-md-4 control-label">&nbsp;</label>
+        <div class="col-md-4">
+          <div class="input-group in-grp1 checkbox-primary-filled">             
+            <input id="checkbox12" class="filled-in" checked="" type="checkbox">
+            <small>I agree  <a href="#/termsandconditions" target="_blank">Terms & Conditions</a> & <a href="#/privacypolicy" target="_blank">Privacy Policy</a>.
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <div class="panel-footer">
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-6">
+          <button class="btn-success btn" id="sbtn">Submit</button>
+          <button class="btn-success btn" id="loginPage">Cancel</button>
+        </div>
+      </div>
+      </div>
+    </form>
+    </div>

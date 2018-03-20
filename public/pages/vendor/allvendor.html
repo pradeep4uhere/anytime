@@ -1,0 +1,74 @@
+<div id="page-wrapper">
+  <div class="graphs">
+      <div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+        <div class="panel-heading">
+          <h2>Vendor List</h2>
+          <div class="panel-ctrls" data-actions-container="" data-action-collapse="{&quot;target&quot;: &quot;.panel-body&quot;}"><span class="button-icon has-bg"><i class="ti ti-angle-down"></i></span></div>
+        </div>
+        <div class="table-responsive" style="display: block;">
+          <table id="example" class="table table-striped table-bordered" width="100%" cellspacing="0">
+            <thead>
+              <tr class="success">
+                <th>#</th>
+                <th>Fist Name</th>
+                <th>Last Name</th>
+                <th>Company Name</th>
+                <th>Address</th>
+                <th>Zipcode</th>
+                <th>Email Address</th>
+                <th>Phone Number</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="item in itemlist | orderBy:'PKCompanyRefNo'">
+                <td>{{item.PKCompanyRefNo}}</td>
+                <td>{{item.fname}}</td>
+                <td>{{item.lname}}</td>
+                <td>{{item.companyName}}</td>
+                <td>{{item.comapnyAdress}}</td>
+                <td>{{item.zipNo}}</td>
+                <td>{{item.companyEmailIds}}</td>
+                <td>{{item.mobile}}</td>
+                <td ng-if="item.compIsActive==1"><span class="active">Active</span></td>
+                <td ng-if="item.compIsActive==0"><span class="inactive">InActive</span></td>
+                <td class="align-right">
+                  <div class="btn-group m-r-sm mail-hidden-options" style="display: inline-block;">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-danger">Action</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <i class=" fa fa-cog icon_8"></i> <span class="caret"></span>
+                  </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                      <li><a href="#/viewprofile/:id={{item.id}}"><i class="fa fa-user"></i>  Profile</a></li>
+                      <li><a href="#/status/id={{item.id}}"><i class=" fa fa-cog icon_8"></i> Active</a></li>
+                      <li class="divider"></li>
+<li><a href="#/addproduct/{{item.PKCompanyRefNo}}"><i class="fa fa-cog icon_9"></i> Add Product</a></li>
+                      <li><a href="#/addsupplier/{{item.PKCompanyRefNo}}"><i class="fa fa-plus-square-o icon_9"></i> Add Supplier</a></li>
+                      <li><a href="#/supplierlist/{{item.PKCompanyRefNo}}"><i class="fa fa-list icon_9"></i>All Supplier</a></li>
+                      <li><a href="#/editvendor/{{item.PKCompanyRefNo}}"> <i class="fa fa-pencil-square-o icon_9"></i>Edit Profile</a></li>
+                      <li><a href="#/changepassword/{{item.PKCompanyRefNo}}"> <i class="fa fa-key"></i> Change Password</a></li>
+                      <li><a href="#"></li>
+                    </ul>
+                  </div>
+                </div>
+                </td>
+              </tr>
+              <tr ng-show="showVal">
+                <td colspan="9">
+                  <div role="alert" class="alert alert-{{class}}">
+                    <strong>{{message}}</strong>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      
+      </div>
+    </div>
+  </div>
+</div>
